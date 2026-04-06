@@ -17,5 +17,5 @@ class AuthModule {
 
     @Provides
     @Singleton
-    fun provideScope() = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+    fun provideScope() = CoroutineScope(SupervisorJob() + Dispatchers.Main)
 }
