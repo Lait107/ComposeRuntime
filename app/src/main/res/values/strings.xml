@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Compose Runtime</string>
-    <string name="button_login">Sing in</string>
+    <string name="hello_message">Hello %1s</string>
+    <string name="sing_in_message">Press button to sign in</string>
+    <string name="button_login">Sign in</string>
     <string name="button_logout">Logout</string>
 </resources>

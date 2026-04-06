@@ -74,10 +74,13 @@ private fun Content(
                 modifier = modifier.padding(bottom = 16.dp)
             )
 
-        is AuthState.LoggedIn -> Greeting(name = state.user.login, modifier)
+        is AuthState.LoggedIn -> Greeting(
+            message = stringResource(R.string.hello_message,state.user.login),
+            modifier,
+        )
 
         is AuthState.LoggedOut -> Greeting(
-            name = stringResource(R.string.button_login),
+            message = stringResource(R.string.sing_in_message),
             modifier,
         )
     }
@@ -106,9 +109,9 @@ private fun Content(
 }
 
 @Composable
-private fun Greeting(name: String, modifier: Modifier = Modifier) {
+private fun Greeting(message: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!",
+        text = message,
         modifier = modifier
     )
 }
